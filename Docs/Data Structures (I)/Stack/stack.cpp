@@ -6,7 +6,7 @@
 using namespace std;
 
 #define MAX 10
-int size = 0;
+int  sizeg = 0;
 
 // Creating a stack
 struct stack {
@@ -43,7 +43,7 @@ void push(st *s, int newitem) {
     s->top++;
     s->items[s->top] = newitem;
   }
-  size++;
+  sizeg++;
 }
 
 // Remove element from stack
@@ -54,14 +54,14 @@ void pop(st *s) {
     printf("Item popped= %d", s->items[s->top]);
     s->top--;
   }
-  size--;
+  sizeg--;
   cout << endl;
 }
 
 // Print elements of stack
 void printStack(st *s) {
   printf("Stack: ");
-  for (int i = 0; i < size; i++) {
+  for (int i = 0; i < sizeg; i++) {
     cout << s->items[i] << " ";
   }
   cout << endl;
